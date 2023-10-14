@@ -13,18 +13,26 @@ class HomeView extends GetView<HomeController> {
           padding: const EdgeInsets.all(8.0),
           child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20,
+              mainAxisSpacing: 10,
               crossAxisCount: 3,
             ),
             itemCount: controller.menuList.length,
             itemBuilder: (ctx, index) {
-              return ElevatedButton(
-                onPressed: controller.menuList[index]['goto'],
-                child: Text(
-                  controller.menuList[index]['name'],
-                  style: const TextStyle(fontSize: 20),
-                  textAlign: TextAlign.center,
+              return InkWell(
+                onTap: controller.menuList[index]['goto'],
+                child: Card(
+                  color: Colors.blueAccent,
+                  child: Center(
+                    child: Text(
+                      controller.menuList[index]['name'],
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                 ),
               );
             },
