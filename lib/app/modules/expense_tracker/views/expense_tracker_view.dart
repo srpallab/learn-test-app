@@ -19,12 +19,14 @@ class ExpenseTrackerView extends GetView<ExpenseTrackerController> {
           )
         ],
       ),
-      body: const Column(
-        children: [
-          Chart(),
-          Expanded(child: ExpensesList()),
-        ],
-      ),
+      body: Get.width < 600
+          ? const Column(children: [Chart(), Expanded(child: ExpensesList())])
+          : const Row(
+              children: [
+                Expanded(child: Chart()),
+                Expanded(child: ExpensesList()),
+              ],
+            ),
     );
   }
 }
