@@ -6,9 +6,7 @@ class HomeController extends GetxController {
   final List<Map<String, dynamic>> menuList = [
     {
       'name': "Roll Dice",
-      "goto": () {
-        Get.toNamed(Routes.ROLL_DICE);
-      },
+      "goto": () => Get.toNamed(Routes.ROLL_DICE),
     },
     {
       'name': "Quiz App",
@@ -27,6 +25,24 @@ class HomeController extends GetxController {
       "goto": () {
         Get.toNamed(Routes.EXPENSE_TRACKER);
       },
+    },
+    {
+      'name': "Chat App",
+      'goto': () {
+        Get.toNamed(Routes.PUSHER_CHAT_APP);
+      }
+    },
+    {
+      'name': "Simple Animation",
+      'goto': () {
+        Get.toNamed(Routes.SIMPLE_ANIMATION);
+      }
+    },
+    {
+      'name': "Chained Animation",
+      'goto': () {
+        Get.toNamed(Routes.CHAINED_ANIMATION);
+      }
     },
   ];
 }

@@ -1,10 +1,13 @@
 import 'package:get/get.dart';
 
 import '../modules/audio_record_and_play/index.dart';
+import '../modules/chained_animation/index.dart';
 import '../modules/expense_tracker/index.dart';
 import '../modules/home/index.dart';
+import '../modules/pusher_chat_app/index.dart';
 import '../modules/quiz_app/index.dart';
 import '../modules/roll_dice/index.dart';
+import '../modules/simple_animation/index.dart';
 
 // ignore_for_file: constant_identifier_names
 
@@ -40,6 +43,21 @@ class AppPages {
       name: _Paths.EXPENSE_TRACKER,
       page: () => const ExpenseTrackerView(),
       binding: ExpenseTrackerBinding(),
+    ),
+    GetPage(
+      name: _Paths.PUSHER_CHAT_APP,
+      page: () => const PusherChatAppView(),
+      binding: PusherChatAppBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIMPLE_ANIMATION,
+      page: () => const SimpleAnimationView(),
+      binding: SimpleAnimationBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHAINED_ANIMATION,
+      page: () => const ChainedAnimationView(),
+      binding: ChainedAnimationBinding(),
     ),
   ];
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/text_styles/app_text_styles.dart';
+import '../../../core/styles/app_text_styles.dart';
 import 'answer_button.dart';
 
 Widget questionScreen({

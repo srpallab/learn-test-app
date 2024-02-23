@@ -2,7 +2,6 @@ import 'dart:developer';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:get/get.dart';
-import 'package:record/record.dart';
 
 class AudioRecordAndPlayController extends GetxController {
   late Record recorder;
@@ -13,31 +12,31 @@ class AudioRecordAndPlayController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    recorder = Record();
+    // recorder = RecordConfig();
     audioPlayer = AudioPlayer();
   }
 
-  Future<void> startRecording() async {
-    try {
-      if (await recorder.hasPermission()) {
-        recorder.start();
-        isPlaying.value = true;
-      }
-    } catch (error) {
-      log("Error Starting Record: $error");
-    }
-  }
+  // Future<void> startRecording() async {
+  //   try {
+  //     if (await recorder.hasPermission()) {
+  //       recorder.start();
+  //       isPlaying.value = true;
+  //     }
+  //   } catch (error) {
+  //     log("Error Starting Record: $error");
+  //   }
+  // }
 
-  Future<void> stopRecording() async {
-    try {
-      if (await recorder.hasPermission()) {
-        audioPath.value = (await recorder.stop())!;
-        isPlaying.value = false;
-      }
-    } catch (error) {
-      log("Error Stopping Record: $error");
-    }
-  }
+  // Future<void> stopRecording() async {
+  //   try {
+  //     if (await recorder.hasPermission()) {
+  //       audioPath.value = (await recorder.stop())!;
+  //       isPlaying.value = false;
+  //     }
+  //   } catch (error) {
+  //     log("Error Stopping Record: $error");
+  //   }
+  // }
 
   Future<void> startPlaying() async {
     try {
@@ -56,7 +55,6 @@ class AudioRecordAndPlayController extends GetxController {
 
   @override
   void onClose() {
-    recorder.dispose();
     audioPlayer.dispose();
     super.onClose();
   }

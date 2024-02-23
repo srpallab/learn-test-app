@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../controllers/audio_record_and_play_controller.dart';
 
 class AudioRecordAndPlayView extends GetView<AudioRecordAndPlayController> {
-  const AudioRecordAndPlayView({Key? key}) : super(key: key);
+  const AudioRecordAndPlayView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +24,10 @@ class AudioRecordAndPlayView extends GetView<AudioRecordAndPlayController> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: controller.isPlaying.value
-                        ? controller.stopRecording
-                        : controller.startRecording,
+                    onPressed: () {},
+                    // onPressed: controller.isPlaying.value
+                    //     ? controller.stopRecording
+                    //     : controller.startRecording,
                     child: Text(
                       controller.isPlaying.value
                           ? 'Stop Recording'

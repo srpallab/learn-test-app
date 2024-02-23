@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/layouts/app_decorations.dart';
+import '../../../core/theme/app_decorations.dart';
 import '../controllers/quiz_app_controller.dart';
 
 class QuizAppView extends GetView<QuizAppController> {
