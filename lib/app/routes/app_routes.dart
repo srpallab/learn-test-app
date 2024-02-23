@@ -13,6 +13,7 @@ abstract class Routes {
   static const PUSHER_CHAT_APP = _Paths.PUSHER_CHAT_APP;
   static const SIMPLE_ANIMATION = _Paths.SIMPLE_ANIMATION;
   static const CHAINED_ANIMATION = _Paths.CHAINED_ANIMATION;
+  static const PLATFORM_CHANNELS = _Paths.PLATFORM_CHANNELS;
 }
 
 abstract class _Paths {
@@ -25,4 +26,5 @@ abstract class _Paths {
   static const PUSHER_CHAT_APP = '/pusher-chat-app';
   static const SIMPLE_ANIMATION = '/simple-animation';
   static const CHAINED_ANIMATION = '/chained-animation';
+  static const PLATFORM_CHANNELS = '/platform-channels';
 }
