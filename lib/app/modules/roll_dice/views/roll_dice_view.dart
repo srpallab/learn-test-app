@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../controllers/roll_dice_controller.dart';
 
 class RollDiceView extends GetView<RollDiceController> {
-  const RollDiceView({Key? key}) : super(key: key);
+  const RollDiceView({super.key});
 
   @override
   Widget build(BuildContext context) {
