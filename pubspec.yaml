@@ -7,38 +7,35 @@ environment:
 
 dependencies: 
   cupertino_icons: ^1.0.6
-
   # State Management
   get: 4.6.6
-
   # Fonts
   google_fonts: ^6.1.0
-  uuid: ^4.2.1
-
+  uuid: ^4.3.3
   # Date Formatting
-  intl: ^0.18.1
-
+  intl: ^0.19.0
   # Audio Record
-  record: ^5.0.1
-  audioplayers: ^5.2.0
-  permission_handler: ^11.0.1
-
+  record: ^5.0.4
+  audioplayers: ^5.2.1
+  permission_handler: ^11.3.0
   # Local Data Store
   shared_preferences: ^2.2.2
-
   # Pusher Channel
-  pusher_channels_flutter: ^2.2.0
-
+  crypto: ^3.0.3
+  pusher_channels_flutter: ^2.2.1
+  pusher_client_fixed: ^0.0.2+3
+  laravel_echo: ^1.0.0-beta.1
+  # pusher_client: ^2.0.0
   # HTTP Calls
-  http: ^1.1.0
-  pretty_http_logger: ^1.0.2
+  http: ^1.2.1
+  pretty_http_logger: ^1.0.3
 
   flutter: 
     sdk: flutter
 
 dev_dependencies: 
   flutter_lints: ^3.0.1
-  mockito: ^5.4.2
+  mockito: ^5.4.4
   flutter_test: 
     sdk: flutter
 
