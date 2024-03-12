@@ -23,7 +23,6 @@ dependencies:
   # Pusher Channel
   crypto: ^3.0.3
   pusher_channels_flutter: ^2.2.1
-  pusher_client_fixed: ^0.0.2+3
   laravel_echo: ^1.0.0-beta.1
   # pusher_client: ^2.0.0
   # HTTP Calls

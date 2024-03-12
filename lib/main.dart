@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'app/core/utils/colors.dart';
 import 'app/routes/app_pages.dart';
-
-final ColorScheme kColorScheme = ColorScheme.fromSeed(
-  seedColor: const Color.fromARGB(255, 96, 59, 182),
-);
-
-final ColorScheme kDarkColorScheme = ColorScheme.fromSeed(
-  brightness: Brightness.dark,
-  seedColor: const Color.fromARGB(255, 5, 99, 125),
-);
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,38 +15,38 @@ void main() {
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
       theme: ThemeData().copyWith(
-        colorScheme: kColorScheme,
+        colorScheme: AppColors.kColorScheme,
         appBarTheme: const AppBarTheme().copyWith(
-          backgroundColor: kColorScheme.onPrimaryContainer,
-          foregroundColor: kColorScheme.primaryContainer,
+          backgroundColor: AppColors.kColorScheme.onPrimaryContainer,
+          foregroundColor: AppColors.kColorScheme.primaryContainer,
         ),
         cardTheme: const CardTheme().copyWith(
-          color: kColorScheme.secondaryContainer,
+          color: AppColors.kColorScheme.secondaryContainer,
           margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: kColorScheme.primaryContainer,
+            backgroundColor: AppColors.kColorScheme.primaryContainer,
           ),
         ),
         textTheme: ThemeData().textTheme.copyWith(
               titleLarge: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: kColorScheme.onSecondaryContainer,
+                color: AppColors.kColorScheme.onSecondaryContainer,
                 fontSize: 18,
               ),
             ),
       ),
       darkTheme: ThemeData.dark().copyWith(
-        colorScheme: kDarkColorScheme,
+        colorScheme: AppColors.kDarkColorScheme,
         cardTheme: const CardTheme().copyWith(
-          color: kDarkColorScheme.secondaryContainer,
+          color: AppColors.kDarkColorScheme.secondaryContainer,
           margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: kDarkColorScheme.primaryContainer,
-            foregroundColor: kDarkColorScheme.onPrimaryContainer,
+            backgroundColor: AppColors.kDarkColorScheme.primaryContainer,
+            foregroundColor: AppColors.kDarkColorScheme.onPrimaryContainer,
           ),
         ),
       ),

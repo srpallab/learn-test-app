@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:get/get.dart';
 import 'package:laravel_echo/laravel_echo.dart';
 import 'package:pusher_channels_flutter/pusher_channels_flutter.dart';
-import 'package:pusher_client_fixed/pusher_client_fixed.dart';
 
 class PusherChatAppController extends GetxController {
   PusherChannelsFlutter pusher = PusherChannelsFlutter.getInstance();
@@ -23,27 +22,27 @@ class PusherChatAppController extends GetxController {
   final String authUrl = "https://icircles.app/api/broadcasting/auth";
 
   void initPusher() {
-    PusherOptions options = PusherOptions(
-      cluster: cluster,
-      auth: PusherAuth(
-        authUrl,
-        headers: {'Authorization': 'Bearer $token'},
-      ),
-    );
-    PusherClient pusherClient = PusherClient(
-      apiKey,
-      options,
-      autoConnect: false,
-      enableLogging: true,
-    );
-    Echo echo = Echo(
-      broadcaster: EchoBroadcasterType.Pusher,
-      client: pusherClient,
-    );
+    // PusherOptions options = PusherOptions(
+    //   cluster: cluster,
+    //   auth: PusherAuth(
+    //     authUrl,
+    //     headers: {'Authorization': 'Bearer $token'},
+    //   ),
+    // );
+    // PusherClient pusherClient = PusherClient(
+    //   apiKey,
+    //   options,
+    //   autoConnect: false,
+    //   enableLogging: true,
+    // );
+    // Echo echo = Echo(
+    //   broadcaster: EchoBroadcasterType.Pusher,
+    //   client: pusherClient,
+    // );
     // Listening public channel
-    echo.channel(channelName).listen('PublicEvent', (e) {
-      log(e);
-    });
+    // echo.channel(channelName).listen('PublicEvent', (e) {
+    //   log(e);
+    // });
   }
 
   @override

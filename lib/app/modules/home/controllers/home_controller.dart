@@ -36,5 +36,9 @@ class HomeController extends GetxController {
       'name': "Platform Channels ",
       'goto': () => Get.toNamed(Routes.PLATFORM_CHANNELS),
     },
+    {
+      'name': "Custom Chart",
+      'goto': () => Get.toNamed(Routes.CUSTOM_CHART),
+    },
   ];
 }

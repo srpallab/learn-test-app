@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 
 import '../modules/audio_record_and_play/index.dart';
 import '../modules/chained_animation/index.dart';
+import '../modules/custom_chart/index.dart';
 import '../modules/expense_tracker/index.dart';
 import '../modules/home/index.dart';
 import '../modules/platform_channels/index.dart';
@@ -64,6 +65,11 @@ class AppPages {
       name: _Paths.PLATFORM_CHANNELS,
       page: () => const PlatformChannelsView(),
       binding: PlatformChannelsBinding(),
+    ),
+    GetPage(
+      name: _Paths.CUSTOM_CHART,
+      page: () => const CustomChartView(),
+      binding: CustomChartBinding(),
     ),
   ];
 }

@@ -14,6 +14,7 @@ abstract class Routes {
   static const SIMPLE_ANIMATION = _Paths.SIMPLE_ANIMATION;
   static const CHAINED_ANIMATION = _Paths.CHAINED_ANIMATION;
   static const PLATFORM_CHANNELS = _Paths.PLATFORM_CHANNELS;
+  static const CUSTOM_CHART = _Paths.CUSTOM_CHART;
 }
 
 abstract class _Paths {
@@ -27,4 +28,5 @@ abstract class _Paths {
   static const SIMPLE_ANIMATION = '/simple-animation';
   static const CHAINED_ANIMATION = '/chained-animation';
   static const PLATFORM_CHANNELS = '/platform-channels';
+  static const CUSTOM_CHART = '/custom-chart';
 }
